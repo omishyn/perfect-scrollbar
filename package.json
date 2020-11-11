@@ -1,8 +1,12 @@
 {
-  "name": "perfect-scrollbar",
+  "name": "om-perfect-scrollbar",
   "version": "1.5.1",
   "description": "Minimalistic but perfect custom scrollbar plugin",
-  "author": "Hyunje Jun <me@noraesae.net> and omishyn",
+  "author": {
+    "name": "Oleh Mishyn",
+    "email": "mishyn.uk@gmail.com",
+    "url": "https://github.com/omishyn"
+  },
   "keywords": [
     "frontend",
     "scroll",
