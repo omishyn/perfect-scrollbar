@@ -1,6 +1,6 @@
 /*!
- * perfect-scrollbar v1.5.1
- * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
+ * perfect-scrollbar v1.5.2
+ * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -330,7 +330,7 @@
     var rect = element.getBoundingClientRect();
     var settings = i.settings;
 
-    i.containerWidth = Math.round(rect.width);
+    i.containerWidth = Math.round(rect.width) - settings.containerWidthCalculationError;
     i.containerHeight = Math.round(rect.height) - settings.containerHeightCalculationError;
 
     i.contentWidth = element.scrollWidth;
@@ -352,7 +352,7 @@
 
     if (
       !settings.suppressScrollX &&
-      i.containerWidth + settings.scrollXMarginOffset < i.contentWidth
+      i.containerWidth + settings.scrollXMarginOffset < i.contentWidth - settings.containerWidthCalculationError
     ) {
       i.scrollbarXActive = true;
       i.railXWidth = i.containerWidth - i.railXMarginWidth;
@@ -1133,7 +1133,8 @@
     useBothWheelAxes: false,
     wheelPropagation: true,
     wheelSpeed: 1,
-    containerHeightCalculationError: 2
+    containerHeightCalculationError: 2,
+    containerWidthCalculationError: 2
   }); };
 
   var handlers = {

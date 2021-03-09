@@ -9,7 +9,7 @@ export default function(i) {
   const rect = element.getBoundingClientRect();
   const settings = i.settings;
 
-  i.containerWidth = Math.round(rect.width);
+  i.containerWidth = Math.round(rect.width) - settings.containerWidthCalculationError;
   i.containerHeight = Math.round(rect.height) - settings.containerHeightCalculationError;
 
   i.contentWidth = element.scrollWidth;
@@ -33,7 +33,7 @@ export default function(i) {
 
   if (
     !settings.suppressScrollX &&
-    i.containerWidth + settings.scrollXMarginOffset < i.contentWidth
+    i.containerWidth + settings.scrollXMarginOffset < i.contentWidth - settings.containerWidthCalculationError
   ) {
     i.scrollbarXActive = true;
     i.railXWidth = i.containerWidth - i.railXMarginWidth;

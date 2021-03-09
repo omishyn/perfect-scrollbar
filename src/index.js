@@ -25,7 +25,8 @@ const defaultSettings = () => ({
   useBothWheelAxes: false,
   wheelPropagation: true,
   wheelSpeed: 1,
-  containerHeightCalculationError: 2
+  containerHeightCalculationError: 2,
+  containerWidthCalculationError: 2
 });
 
 const handlers = {

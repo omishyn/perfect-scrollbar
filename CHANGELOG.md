@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.5.2] - 2021-03-09
+ - horizontal scroll fixed
 ## [1.5.1] - 2020-11-11
 
 ### Notable changes:
