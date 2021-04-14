@@ -7,7 +7,7 @@ const buble = require('rollup-plugin-buble');
 const version = require('./package.json').version;
 const banner =
   `/*!
- * perfect-scrollbar v${version}
+ * om-perfect-scrollbar v${version}
  * Copyright ${new Date().getFullYear()} AMC BI Team & OM, MDBootstrap and Contributors
  * Licensed under MIT
  */
