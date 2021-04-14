@@ -74,7 +74,7 @@ You can install and use perfect-scrollbar with npm. It's registered
 as [perfect-scrollbar](https://www.npmjs.com/package/perfect-scrollbar).
 
 ```
-$ npm install perfect-scrollbar
+$ npm install om-perfect-scrollbar
 ```
 #### From sources
 
@@ -82,7 +82,7 @@ If you want to use the development version of the plugin, build from source
 manually. The development version may be unstable.
 
 ```
-$ git clone https://github.com/mdbootstrap/perfect-scrollbar.git
+$ git clone https://github.com/omishyn/perfect-scrollbar.git
 $ cd perfect-scrollbar
 $ npm install
 $ npm run build
@@ -282,7 +282,7 @@ that Y-axis scroll bar is not enabled just because of a few pixels.
 perfect-scrollbar dispatches custom events.
 
 ```js
-container.addEventListener('ps-scroll-x', () => ...);
+container.addEventListener('ps-scroll-x', () => {/* ... */});
 ```
 
 ### `ps-scroll-y`
@@ -329,7 +329,7 @@ This event fires when scrolling reaches the end of the x-axis.
 You can also watch the reach state via the `reach` property.
 
 ```js
-const ps = new PerfectScrollbar(...);
+const ps = new PerfectScrollbar(/* ... */);
 
 console.log(ps.reach.x); // => 'start' or 'end' or null
 console.log(ps.reach.y); // => 'start' or 'end' or null
