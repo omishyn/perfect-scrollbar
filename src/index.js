@@ -37,7 +37,7 @@ const handlers = {
   touch,
 };
 
-export default class PerfectScrollbar {
+export class PerfectScrollbar {
   constructor(element, userSettings = {}) {
     if (typeof element === 'string') {
       element = document.querySelector(element);

@@ -1,11 +1,8 @@
-import * as CSS from '../lib/css';
-import * as DOM from '../lib/dom';
 import cls, {
   addScrollingClass,
   removeScrollingClass,
 } from '../lib/class-names';
 import updateGeometry from '../update-geometry';
-import { toInt } from '../lib/util';
 
 export default function(i) {
   bindMouseScrollHandler(i, [

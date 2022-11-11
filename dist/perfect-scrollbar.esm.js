@@ -1,6 +1,6 @@
 /*!
- * perfect-scrollbar v1.5.2
- * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
+ * om-perfect-scrollbar v2.0.1
+ * Copyright 2022 AMC BI Team & OM, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -482,8 +482,6 @@ function updateCss(element, i) {
 }
 
 function clickRail(i) {
-  var element = i.element;
-
   i.event.bind(i.scrollbarY, 'mousedown', function (e) { return e.stopPropagation(); });
   i.event.bind(i.scrollbarYRail, 'mousedown', function (e) {
     var positionTop =
@@ -1346,5 +1344,5 @@ PerfectScrollbar.prototype.removePsClasses = function removePsClasses () {
     .join(' ');
 };
 
-export default PerfectScrollbar;
+export { PerfectScrollbar };
 //# sourceMappingURL=perfect-scrollbar.esm.js.map

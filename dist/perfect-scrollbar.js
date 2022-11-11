@@ -1,14 +1,14 @@
 /*!
- * perfect-scrollbar v1.5.2
- * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
+ * om-perfect-scrollbar v2.0.1
+ * Copyright 2022 AMC BI Team & OM, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.PerfectScrollbar = factory());
-}(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = global || self, factory(global.PerfectScrollbar = {}));
+}(this, (function (exports) { 'use strict';
 
   function get(element) {
     return getComputedStyle(element);
@@ -488,8 +488,6 @@
   }
 
   function clickRail(i) {
-    var element = i.element;
-
     i.event.bind(i.scrollbarY, 'mousedown', function (e) { return e.stopPropagation(); });
     i.event.bind(i.scrollbarYRail, 'mousedown', function (e) {
       var positionTop =
@@ -1352,7 +1350,9 @@
       .join(' ');
   };
 
-  return PerfectScrollbar;
+  exports.PerfectScrollbar = PerfectScrollbar;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 //# sourceMappingURL=perfect-scrollbar.js.map

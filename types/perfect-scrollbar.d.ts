@@ -1,4 +1,4 @@
-declare namespace PerfectScrollbar {
+export declare namespace PerfectScrollbarModel {
   export interface Options {
     handlers?: string[];
     maxScrollbarLength?: number;
@@ -17,8 +17,8 @@ declare namespace PerfectScrollbar {
   }
 }
 
-declare class PerfectScrollbar {
-  constructor(element: string | Element, options?: PerfectScrollbar.Options);
+export declare class PerfectScrollbar {
+  constructor(element: string | Element, options?: PerfectScrollbarModel.Options);
 
   update(): void;
   destroy(): void;
@@ -57,8 +57,6 @@ declare class PerfectScrollbar {
   scrollbarYRail: HTMLElement;
   scrollbarYRight: number;
   scrollbarYTop: number;
-  settings: PerfectScrollbar.Options;
+  settings: PerfectScrollbarModel.Options;
   reach: { x: 'start' | 'end' | null, y: 'start' | 'end' | null };
 }
-
-export default PerfectScrollbar;
